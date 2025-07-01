@@ -1,4 +1,4 @@
-import { readFile } from 'fs';
+import { readFile, writeFile } from 'fs';
 import readline from 'readline';
 
 const createStudent = function(){
@@ -25,8 +25,8 @@ const createStudent = function(){
             rl.question('Enter grade: ', function(grade){
                 newStudent["grade"] = grade;
                 rl.close();
-                file.push(newStudent)
-                console.log(file)
+                file.unshift(newStudent);
+                writeFile("C:/Users/Chaim0533197133/OneDrive/Documents/programming/projects/school-crud/db/db.txt", JSON.stringify(file), () => {});
             })
         })
     })
