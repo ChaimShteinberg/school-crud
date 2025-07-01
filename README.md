@@ -13,7 +13,7 @@
 
 ### מבנה תלמיד 
 
-{
+{  
     id:id  
     name: name,   
     grade: grade  
